@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic Page - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Home</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="IDEEA.html">Project</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-linkedin"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Siemens PLC elevator programming</h1>
+									<p>In response to the demand for enhanced efficiency and safety in vertical transportation systems, this project undertakes the automation of a four-story elevator through the implementation of a Programmable Logic Controller (PLC). Elevating beyond conventional manual operation, this endeavor strives to integrate advanced control algorithms and sensor technologies to orchestrate seamless and reliable elevator functionality. By leveraging the capabilities of the PLC, intricate operational sequences are meticulously programmed to ensure optimal performance, encompassing floor selection, door operation, and emergency protocols. Through this innovative automation solution, the project aims to enhance user experience, minimize downtime, and elevate the standards of vertical transportation systems to new heights.</p>
+								</header>
+								<div class="image main"><img src="images/elevador 2.png" alt="" /></div>
+								<p>I employed a technique known as structured programming, wherein my initial focus was directed towards the movement of our elevator. This entailed programming the elevator to ascend and descend according to our specified inputs, essentially responding to call buttons by traversing to designated positions. Thus, the elevator functioned solely based on the calls received and the corresponding positions indicated. Once this foundational functionality was successfully established, I proceeded to the subsequent stage of programming.</p>
+								<p>To facilitate the elevator's upward and downward movement, we established memories indicating the floor calls and stops. These memories were crucial for creating comparators based on the direction of the call—upward or downward—and cabin buttons. A memory was crafted for each floor, accounting for its unique conditions.</p>
+								<div class="image main"><img src="images/elevador 3.png" alt="" /></div>
+								<div class="image main"><img src="images/elevador 4.png" alt="" /></div>
+								<p>As depicted in the preceding images, the criteria for operating our elevator extend beyond mere memory comparisons, which guide its direction. Additional conditions include ensuring all doors are closed to enable motor movement, reflecting common sense in the operation of a typical elevator to efficiently respond to calls. Furthermore, it's imperative that the emergency stop button remains inactive.</p>
+								<h2>Door opening system</h2></p>
+								<p>Once we had mastered the vertical movement of ascending and descending, we proceeded to implement the door operation. This involved opening the doors upon arrival at a floor and automatically closing them after a 3-second delay. To accomplish this, we established a condition for each floor to trigger door opening, utilizing the start and end-of-travel sensors for each door and floor of the elevator. This ensured that upon reaching the called floor, the doors would open until the end-of-travel sensor was activated. After a 3-second timer elapsed, the doors would then automatically close, ready for the next call.</p>
+								<div class="image main"><img src="images/elevador 5.png" alt="" /></div>
+								<div class="image main"><img src="images/elevador 6.png" alt="" /></div>
+								<h2>Button interlocking</h2>
+								<p>To correctly call all floors, button interlocking was implemented. These are the aforementioned memories that would serve us to make the call until the indicated floor was reached; they were stored as "floor_location," indicating the respective floor. To this same interlocking, the corresponding LEDs of the cabin interior button were added depending on the call.</p>
+								<div class="image main"><img src="images/elevador 7.png" alt="" /></div>
+								<h2>Speed Change control</h2>
+								<p>To implement speed changes, the elevator brakes upon reaching a floor but maintains normal speed during travel. An array was created to set the relay based on floor conditions. Upper and lower sensors of each floor dictate when to brake: "slow up" for ascending and "slow down" for descending. This logic is replicated for each floor, with the reset occurring upon reaching the indicated floor.</p>
+								<div class="image main"><img src="images/elevador 8.png" alt="" /></div>
+								<p>This project presented significant challenges, as it required a comprehensive logic to manage a considerable number of variables while adhering to various exclusive processes. Despite its complexity, I found it to be an enjoyable endeavor, with each milestone serving as motivation to progress further in the programming. Undoubtedly, the most challenging aspects were controlling the speed and implementing the emergency stop, as their operation required precision and careful consideration of the conditions under which these processes would be triggered.</p>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>Monterrey, Nuevo León<br />
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(+52) 7222405967</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">gerrymobu@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-linkedin"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
